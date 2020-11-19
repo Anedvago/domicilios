@@ -1,20 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header >
+  <ion-toolbar color="primary">    
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      Inicio
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content color="light">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="9">
+        <ion-searchbar animated placeholder="Buscar"></ion-searchbar>
+      </ion-col>
+      <ion-col size="2">
+        <ion-button id="botonBuscar">
+          <ion-icon name="search-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-label>Ordenar por</ion-label>
+            <ion-select value="brown" okText="Aceptar" cancelText="Cancelar">
+              <ion-select-option value="brown">Precio</ion-select-option>
+              <ion-select-option value="blonde">Marca</ion-select-option>
+              <ion-select-option value="black">Categoria</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <img id="img" src="assets/icon/arroz.png"/>
+          <ion-card-content>
+            <ion-card-title>
+              Arroz 
+            </ion-card-title>
+            <p>
+              Peso: 500gr
+              Marca: roa
+              Precio : 2.500
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      
+      
+      
+    </ion-row>
+
+  </ion-grid>
+  
+ 
 </ion-content>
